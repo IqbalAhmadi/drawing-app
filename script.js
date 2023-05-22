@@ -2,6 +2,13 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
 
 const canvas = document.getElementById('canvas')
+const increaseBtn = document.getElementById('increase')
+const decreaseBtn = document.getElementById('decrease')
+const sizeEl = document.getElementById('size')
+const colorEl = document.getElementById('color')
+const clearEl = document.getElementById('clear')
+
+// get context
 const ctx = canvas.getContext('2d')
 
 // global variable
@@ -54,3 +61,5 @@ function drawLine(x1, y1, x2, y2) {
   ctx.lineWidth = size * 2
   ctx.stroke()
 }
+
+colorEl.addEventListener('change', (e) => (color = e.target.value))
